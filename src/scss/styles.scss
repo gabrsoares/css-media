@@ -19,17 +19,22 @@ h1 {
     width: 100%;
 }
 
+h2 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
 #imagens {
     .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        width: 70%;
         margin: 0 auto;
         
         img {
-            height: 200px;
-            width: auto;
+            height: 450px;
+            width: 450px;
             margin: 5px;
             object-fit: fill;
             object-position: bottom;
@@ -45,10 +50,10 @@ h1 {
 
 }
 header {
-    background-color: $color-bg-default;
-    width: 100vw;
+    background-color: #001220;
+    width: 100%;
     position: relative;
-    height: 50vh;
+    height: 100vh;
     overflow: hidden;
 
     h1 {
@@ -58,25 +63,23 @@ header {
 }
 
 .waves {
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 110%;
+    width: 120%;
 
     .wave-01 {
-        animation: wave1 3s ease-in-out infinite alternate;
+        animation: wave1 5s infinite alternate;
         
     }
 
     .wave-02 {
-        animation: wave2 3s ease-in-out infinite alternate;
+        animation: wave2 5s ease-in-out infinite alternate;
     }
 
     .wave-03 {
-        animation: dash1 3s cubic-bezier(0, 1.23, 1, 0.11) infinite alternate;
-        stroke-dasharray: 150;
-        stroke: #fff;
-        stroke-width: 3px;
+        animation:  wave3 5s infinite alternate;
     }
 }
 
